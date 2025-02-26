@@ -1,0 +1,63 @@
+.mainContainer {
+  @apply h-screen bg-gradient-to-br from-indigo-50 via-blue-100 to-indigo-200 flex items-center justify-center px-4 py-12;
+}
+
+.formWrapper {
+  @apply w-full max-w-xl mx-auto;
+}
+
+.formContainer {
+  @apply bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 md:p-8;
+}
+
+.formHeading {
+  @apply text-2xl font-semibold text-gray-900 mb-2 tracking-tight text-center;
+}
+
+.formSubheading {
+  @apply text-gray-600 text-lg leading-relaxed max-w-md mx-auto text-center;
+}
+
+.form {
+  @apply space-y-4 mt-5;
+}
+
+.formField {
+  @apply space-y-1;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.inputField {
+  @apply block w-full px-4 py-2 rounded-md border border-gray-300 text-gray-900 text-base placeholder:text-gray-400 focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all duration-200 hover:border-gray-300;
+}
+
+.inputFieldError {
+  border: 1px solid red;
+}
+
+.formButton {
+  @apply w-full px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500/50 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-violet-500/25;
+}
+
+.errorMessage {
+  @apply text-xs font-medium text-red-500 leading-[17px];
+}
+
+.googleButton {
+  @apply w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl mt-4 font-semibold shadow-md transition-all duration-200;
+}
+
+.googleIcon {
+  @apply text-white;
+}
+
+.alreadyHaveAccount {
+  @apply text-center text-gray-600 mt-4;
+}
+
+.loginLink {
+  @apply text-violet-600 cursor-pointer hover:underline;
+}

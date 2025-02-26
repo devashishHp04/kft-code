@@ -1,0 +1,124 @@
+.mainContainer {
+  @apply h-screen bg-gradient-to-br from-indigo-50 via-blue-100 to-indigo-200 flex items-center justify-center px-4 py-12;
+}
+
+.formWrapper {
+  @apply w-full max-w-xl mx-auto;
+}
+
+.formContainer {
+  @apply bg-white rounded-2xl shadow-lg shadow-gray-200/50 p-6 md:p-8;
+}
+
+.formHeader {
+  @apply mb-4 text-center;
+}
+
+.formHeading {
+  @apply text-2xl font-semibold text-gray-900 mb-2 tracking-tight text-center;
+}
+
+.formSubheading {
+  @apply text-gray-600 text-lg leading-relaxed max-w-md mx-auto text-center;
+}
+
+.form {
+  @apply space-y-4 mt-5;
+}
+
+.formFields {
+  @apply space-y-1;
+}
+
+.formField {
+  @apply space-y-1;
+}
+
+.googleButton {
+  @apply w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-gray-900 bg-white border border-gray-300 hover:border-gray-400 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400/50 shadow-md shadow-gray-300/25 mt-4;
+}
+
+.createAccountButton {
+  @apply w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-gray-900 bg-gray-100 border border-gray-300 hover:border-gray-400 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400/50 shadow-md shadow-gray-300/25 mt-4;
+}
+
+.googleIcon {
+  @apply text-gray-700;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.inputField,
+.textAreaField {
+  @apply block w-full px-4 py-2 rounded-md border border-gray-300 text-gray-900 text-base placeholder:text-gray-400 focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all duration-200 hover:border-gray-300;
+}
+
+.textAreaField {
+  @apply resize-none h-24;
+}
+
+.formButton {
+  @apply w-full px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500/50 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-violet-500/25;
+}
+
+.errorMessage {
+  @apply text-xs font-medium text-red-500 leading-[17px];
+}
+
+@media (prefers-color-scheme: light) {
+  .mainContainer {
+    @apply bg-gradient-to-br from-gray-900 via-gray-900 to-slate-900;
+  }
+
+  .formContainer {
+    @apply bg-gray-900 shadow-gray-900/50;
+  }
+
+  .formHeading {
+    @apply text-white;
+  }
+
+  .formSubheading {
+    @apply text-gray-400;
+  }
+
+  .label {
+    @apply text-gray-300;
+  }
+
+  .inputField,
+  .textAreaField {
+    @apply bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:ring-violet-500/30 focus:border-violet-500 hover:border-gray-600;
+  }
+}
+
+@media (max-width: 640px) {
+  .formContainer {
+    @apply p-4;
+  }
+
+  .formFields {
+    @apply space-y-4;
+  }
+
+  .formButton {
+    @apply px-4 py-2;
+  }
+}
+
+.formField {
+  @apply space-y-1 relative;
+}
+
+.errorContainer {
+  @apply h-[17px];
+}
+
+.inputFieldError {
+  border: 1px solid red;
+}
+.textAreaFieldError {
+  border: 1px solid red;
+}

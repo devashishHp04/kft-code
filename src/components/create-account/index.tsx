@@ -5,7 +5,6 @@ import styles from "./create-account.module.css";
 import Loader from "../loader";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { useRouter } from "next/navigation";
-import { FirebaseError } from "firebase/app";
 import { toast } from "sonner";
 import axios from "axios";
 import { getErrorMessage } from "@/lib/errorStatus";

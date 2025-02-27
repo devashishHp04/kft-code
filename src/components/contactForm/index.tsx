@@ -13,6 +13,7 @@ import { FirebaseError } from "firebase/app";
 import { FcGoogle } from "react-icons/fc";
 import { getErrorMessage } from "@/lib/errorStatus";
 import axios from "axios";
+import apiClient from "@/utils/apiClient";
 
 interface LoginValues {
   email: string;
@@ -29,14 +30,16 @@ const LoginForm = () => {
     { setSubmitting }: FormikHelpers<LoginValues>
   ) => {
     try {
-      await axios.post("/api/login", values);
+      await apiClient.post("/auth/login", values);
       toast.success("Login successful!");
       push("/profile");
     } catch (error) {
-      let errorMessage = "";
-      if (error instanceof FirebaseError) {
-        errorMessage = getErrorMessage(error.response?.data?.error);
+      let errorMessage = "An unexpected error occurred.";
+
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = getErrorMessage(error.response.data.error);
       }
+
       toast.error(errorMessage);
     } finally {
       setSubmitting(false);

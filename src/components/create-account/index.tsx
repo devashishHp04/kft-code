@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import axios from "axios";
 import { getErrorMessage } from "@/lib/errorStatus";
+import apiClient from "@/utils/apiClient";
 
 const initialValues = {
   name: "",
@@ -18,6 +19,7 @@ const initialValues = {
 
 interface HandleSubmitParams {
   setSubmitting: (isSubmitting: boolean) => void;
+  resetForm: () => void;
 }
 
 const CreateAccount = () => {
@@ -25,20 +27,17 @@ const CreateAccount = () => {
 
   const handleSubmit = async (
     values: typeof initialValues,
-    { setSubmitting }: HandleSubmitParams
+    { setSubmitting, resetForm }: HandleSubmitParams
   ) => {
     try {
-      await axios.post("/api/signup", values);
+      await apiClient.post("/auth/create-account", values);
       toast.success("Account created successfully!");
+      resetForm();
     } catch (error) {
       let errorMessage = "Failed to create account";
-      console.log(error.response?.data?.error, "error.response?.data?.error");
-
-      if (axios.isAxiosError(error)) {
-        errorMessage =
-          getErrorMessage(error.response?.data?.error) || errorMessage;
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = getErrorMessage(error.response.data.error);
       }
-
       toast.error(errorMessage);
     } finally {
       setSubmitting(false);

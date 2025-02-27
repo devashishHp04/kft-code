@@ -23,7 +23,7 @@
 }
 
 .form {
-  @apply space-y-4 mt-5;
+  @apply space-y-3 mt-5;
 }
 
 .formFields {
@@ -64,7 +64,7 @@
 }
 
 .errorMessage {
-  @apply text-xs font-medium text-red-500 leading-[17px];
+  @apply text-xs text-red-500 leading-[17px];
 }
 
 @media (prefers-color-scheme: light) {

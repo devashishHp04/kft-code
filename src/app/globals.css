@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.errorContainer {
+  @apply h-[17px] font-bold;
+}

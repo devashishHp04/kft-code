@@ -73,11 +73,13 @@ const CreateAccount = () => {
                     }`}
                     placeholder="Enter your full name"
                   />
-                  <ErrorMessage
-                    name="name"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.formField}>
@@ -95,11 +97,13 @@ const CreateAccount = () => {
                     }`}
                     placeholder="Enter your email"
                   />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.formField}>
@@ -117,11 +121,13 @@ const CreateAccount = () => {
                     }`}
                     placeholder="Enter your password"
                   />
-                  <ErrorMessage
-                    name="password"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="password"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
 
                 <div className={styles.formField}>
@@ -139,11 +145,13 @@ const CreateAccount = () => {
                     }`}
                     placeholder="Confirm your password"
                   />
-                  <ErrorMessage
-                    name="confirmPassword"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="confirmPassword"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
 
                 <button

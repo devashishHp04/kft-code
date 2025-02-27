@@ -87,11 +87,13 @@ const LoginForm = () => {
                     }`}
                     placeholder="Enter your email"
                   />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
                 <div className={styles.formField}>
                   <label htmlFor="password" className={styles.label}>
@@ -108,11 +110,13 @@ const LoginForm = () => {
                     }`}
                     placeholder="Enter your password"
                   />
-                  <ErrorMessage
-                    name="password"
-                    component="div"
-                    className={styles.errorMessage}
-                  />
+                  <div className="errorContainer">
+                    <ErrorMessage
+                      name="password"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                 </div>
                 <button
                   type="submit"
